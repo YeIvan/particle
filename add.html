@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="add.php"  align="center" >
+    <p>标题</p><br/>
+    <textarea name="title"></textarea>
+    <p>发布者</p><br/>
+    <textarea name="publiser"></textarea>
+    <p>是否置顶</p><br/>
+    <input type="radio"  name="isTop" value="1">是
+    <input type="radio"  name="isTop" value="2">否
+    <p>内容</p><br/>
+    <textarea name="content" maxlength="50" rows="10" required placeholder="此处填写新闻内容"></textarea><br/>
+    <input type="submit" value="提交"><input type="reset" value="清空">
+</form>
+</body>
+</html>

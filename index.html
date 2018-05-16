@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>ID</th><th>标题</th><th>是否置顶</th><th>内容</th><th>作者</th><th>发布时间</th><th>操作</th>
+    </tr>
+    <?php foreach($news as $value){  ?>
+    <tr>
+        <td><?php echo $value['id']; ?></td>
+        <td><?php echo $value['title']; ?></td>
+        <td><?php echo $value['isTop']==1?"是":"否"; ?></td>
+        <td><?php echo $value['content']; ?></td>
+        <td><?php echo $value['publiser']; ?></td>
+        <td><?php echo $value['pub_time']; ?></td>
+        <td><a href="delete.php?id=<?php echo $value['id']?>" onclick="return confirm('是否确定删除当前新闻?');">删除</a>
+            <a href="alter.php?id=<?php echo $value['id']?>">修改</a>
+         </td>
+    </tr>
+    <?php } ?>
+
+</table>
+<p align="center"><a href="add.html">新增新闻</a></p>
+</body>
+</html>

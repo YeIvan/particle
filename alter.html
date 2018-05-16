@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="add.php">
+    <p>标题</p><br/>
+    <textarea name="title"><?php echo $news['title'] ?></textarea>
+    <p>发布者</p><br/>
+    <textarea name="publiser"><?php echo $news['publiser'] ?></textarea>
+    <p>是否置顶</p><br/>
+    <input type="radio" name="isTop" <?php echo $news['isTop']==1?'checked="checked"' :'';?>value="1" >是
+    <input type="radio" name="isTop" <?php echo $news['isTop']==2?'checked="checked"' :'';?>value="2" >否<br>
+    <p>内容</p><br/>
+    <textarea name="content"><?php echo $news['content'] ?></textarea>
+    <input type="submit" value="提交"><input type="reset" value="清空">
+</form>
+</body>
+</html>
